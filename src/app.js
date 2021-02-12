@@ -9,6 +9,10 @@ const authRouter = require('./resources/user/auth.router')
 const eventRouter = require('./resources/event/event.router')
 const messageRouter = require('./resources/message/message.router');
 
+app.get('/hello', (req,res)=>{
+  res.send('HELLO FROM SERVER')
+})
+
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors());
